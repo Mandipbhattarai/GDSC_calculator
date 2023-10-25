@@ -25,9 +25,10 @@ to your GitHub account. This creates a copy of the project that you can modify.
     git commit -m "Add feature: your-feature-name"
 ## Push to Your Fork: Push your changes to your fork on GitHub.
       git push origin feature/your-feature-name
-## Submit a Pull Request: Open a pull request on our original repository. Provide a clear title and description for your pull request, explaining the purpose of your changes.
-## Review and Discussion: Engage in discussions or reviews related to your pull request. Be open to feedback and make any necessary adjustments.
+### Submit a Pull Request: Open a pull request on our original repository. Provide a clear title and description for your pull request, explaining the purpose of your changes.
 
-## Contirbuting To Our Project? -> By participating in our Calculator project, you agree to abide by this Code of Conduct. We appreciate your commitment to creating a positive and inclusive community for all.
+### Review and Discussion: Engage in discussions or reviews related to your pull request. Be open to feedback and make any necessary adjustments.
 
-## Thank you for your cooperation and support. Together, we can build a better project.
+### Contirbuting To Our Project? -> By participating in our Calculator project, you agree to abide by this Code of Conduct. We appreciate your commitment to creating a positive and inclusive community for all.
+
+### Thank you for your cooperation and support. Together, we can build a better project.
