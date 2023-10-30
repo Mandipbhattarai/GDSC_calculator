@@ -16,7 +16,7 @@ body {
 
 .calculator {
     position: relative;
-    width: 340px;
+    width: 500px;
     padding: 20px;
     border-radius: 20px;
     box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.1), -15px -15px 20px #fffb;
