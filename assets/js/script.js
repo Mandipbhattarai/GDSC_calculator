@@ -12,7 +12,7 @@ for (let i = 0; i < btn.length; i++) {
             } catch (error) {
                 value.innerHTML = 'Error';
             }
-        } else if (this.innerHTML === "C") {
+        } else if (this.innerHTML === "Clear") {
             value.innerHTML = "";
         } else if (this.innerHTML === "√") {
             if (isValidInput(value.innerHTML) && eval(value.innerHTML) >= 0) {
