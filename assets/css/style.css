@@ -8,6 +8,7 @@ body {
     align-items: center;
     min-height: 100vh;
     background: #edf1f4;
+    margin: 0;
 }
 
 .dark {
@@ -16,50 +17,50 @@ body {
 
 .calculator {
     position: relative;
-    width: 500px;
+    width: 350px;
     padding: 20px;
     border-radius: 20px;
-    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.1), -15px -15px 20px #fffb;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1), -5px -5px 20px #fff;
+    background: #fff;
+}
+.calculator-display {
+    overflow-x: auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+    max-height: 120px;
 }
 
-.dark .calculator {
-    background: #33393e;
-    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.25), -15px -15px 20px rgba(255, 255, 255, 0.1);
-}
 
 .calculator .buttons {
-    position: relative;
     display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .calculator .buttons #value {
-    position: relative;
     grid-column: span 4;
     user-select: none;
     overflow: none;
     width: 100%;
-    color: #5166d6;
-    height: 100px;
-    line-height: 100px;
-    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 20px #fff;
+    color: #333;
+    height: 60px;
+    line-height: 60px;
+    border: 2px solid #ddd;
     border-radius: 10px;
     margin-bottom: 12px;
-    padding: 0 20px;
-    font-size: 2em;
+    padding: 0 10px;
+    font-size: 1.6em;
     font-weight: 500;
-}
-
-.dark .calculator .buttons #value {
-    /* background: #33393e; */
-    color: #eee;
-    box-shadow: inset 15px 15px 20px rgba(0, 0, 0, 0.5), inset -15px -15px 20px rgba(255, 255, 255, 0.1);
+    background: #f7f7f7;
 }
 
 .calculator .buttons span {
     position: relative;
     padding: 10px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 20px #fff;
-    margin: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1), -3px -3px 10px #fff;
     cursor: pointer;
     user-select: none;
     min-width: 40px;
@@ -67,66 +68,32 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 1.2em;
-    color: #666;
-    border: 2px solid #edf1f4;
+    color: #333;
+    border: 2px solid #ddd;
     border-radius: 10px;
+    transition: all 0.2s;
 }
 
-.dark .calculator .buttons span {
-    color: #eee;
-    border: 2px solid #333;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25), -5px -5px 10px rgba(255, 255, 255, 0.1);
+.calculator .buttons span.operator {
+    background: #f44336;
+    color: #fff;
+    font-weight: bold;
+}
+
+.dark .calculator .buttons span.operator {
+    background: #31a935;
+    border: 2px solid #1d6921;
+    color: #fff;
 }
 
 .calculator .buttons span:active {
-    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 20px #fff;
+    box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.1), inset -3px -3px 10px #fff;
     color: #f44336;
 }
 
 .dark .calculator .buttons span:active {
-    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.25), inset -5px -5px 10px rgba(255, 255, 255, 0.1);
-    color: #f44336;
-}
-
-.calculator .buttons span#clear {
-    grid-column: span 2;
-    background: #f44336;
-    color: #fff;
-    border: 2px solid #edf1f4;
-}
-
-.calculator .buttons span#add {
-    grid-row: span 2;
-    background: #31a935;
-    color: #fff;
-    border: 2px solid #edf1f4;
-}
-
-
-.calculator .buttons span#equal {
-    grid-row: span 2;
-    background: #2196f3;
-    color: #fff;
-    border: 2px solid #edf1f4;
-}
-
-.dark .calculator .buttons span#clear,
-.dark .calculator .buttons span#add,
-.dark .calculator .buttons span#equal {
-    border: 2px solid #333;
-}
-
-.dark .calculator .buttons span#clear:active,
-.dark .calculator .buttons span#add:active,
-.dark .calculator .buttons span#equal:active {
-    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1);
-}
-
-.calculator .buttons span#clear:active,
-.calculator .buttons span#add:active,
-.calculator .buttons span#equal:active {
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff,
-        inset 5px 5px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.1), inset -3px -3px 10px #fff;
+    color: #31a935;
 }
 
 .toggleBtn {
@@ -139,10 +106,8 @@ body {
     background: #555;
     cursor: pointer;
     border: 2px solid #edf1f4;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1),
-        0px -1px 10px #fff;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1), 0px -1px 10px #fff;
 }
-
 
 @media only screen and (max-width: 599px) {
     .toggleBtn {

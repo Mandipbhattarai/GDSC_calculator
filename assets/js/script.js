@@ -12,7 +12,7 @@ for (let i = 0; i < btn.length; i++) {
             } catch (error) {
                 value.innerHTML = 'Error';
             }
-        } else if (this.innerHTML === "Clear") {
+        } else if (this.innerHTML === "C") {
             value.innerHTML = "";
         } else if (this.innerHTML === "√") {
             if (isValidInput(value.innerHTML) && eval(value.innerHTML) >= 0) {
@@ -56,6 +56,14 @@ for (let i = 0; i < btn.length; i++) {
             } else {
                 value.innerHTML = 'Invalid Input';
             }
+        } else if (this.innerHTML === "e^x") {
+            if (isValidInput(value.innerHTML)) {
+                value.innerHTML = Math.exp(eval(value.innerHTML));
+            } else {
+                value.innerHTML = 'Invalid Input';
+            }
+        } else if (this.innerHTML === "π") {
+            value.innerHTML += Math.PI;
         } else {
             value.innerHTML += this.innerHTML;
         }
