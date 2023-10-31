@@ -56,6 +56,14 @@ for (let i = 0; i < btn.length; i++) {
             } else {
                 value.value = 'Invalid Input';
             }
+        } else if (this.innerHTML === "e^x") {
+            if (isValidInput(value.innerHTML)) {
+                value.innerHTML = Math.exp(eval(value.innerHTML));
+            } else {
+                value.innerHTML = 'Invalid Input';
+            }
+        } else if (this.innerHTML === "π") {
+            value.innerHTML += Math.PI;
         } else {
             value.value += this.innerHTML;
         }

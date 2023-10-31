@@ -5,46 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/img/calculator_icon.png">
-    <title>Calculator</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/calculator.css">
+    <title>Scientific Calculator</title>
 </head>
 <body>
     <div class="container d-flex justify-content-center align-items-center">
         <div class="toggleBtn"></div>
         <div class="calculator">
+            <div class="calculator-display">
+                <h2 id="value" class="text-end">0</h2>
+            </div>
             <div class="buttons">
-                <input id="value" class="text-end" value="">
                 <span id="clear">Clear</span>
+                <span>√</span>
+                <span>x²</span>
                 <span>/</span>
-                <span>*</span>
                 <span>7</span>
                 <span>8</span>
                 <span>9</span>
-                <span>-</span>
+                <span>*</span>
                 <span>4</span>
                 <span>5</span>
                 <span>6</span>
-                <span id="add">+</span>
+                <span>-</span>
                 <span>1</span>
                 <span>2</span>
                 <span>3</span>
+                <span>+</span>
                 <span>0</span>
-                <span>00</span>
                 <span>.</span>
                 <span id="equal">=</span>
-                <span id="sqrt">√</span>
-                <span id="squared">x²</span>
                 <span id="sin">sin</span>
                 <span id="cos">cos</span>
                 <span id="tan">tan</span>
                 <span id="log">log</span>
                 <span id="ln">ln</span>
+                <span id="exp">e^x</span>
+                <span id="pi">π</span>
             </div>
         </div>
     </div>
-
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/scientific-calculator.js"></script>
 </body>
 </html>
