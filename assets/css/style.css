@@ -112,3 +112,52 @@ body {
         display: none;
     }
 }
+
+/* For Tablets */
+@media only screen and (max-width: 768px) {
+    .calculator{
+        margin: 2.5rem 0;
+    }
+    
+    }
+    
+/* For Mobile-L */
+    @media only screen and (max-width: 426px){
+        .calculator .buttons span{
+            font-size: 1rem;
+        }
+    }
+    
+/* For Mobile M */
+    @media only screen and (max-width: 380px){
+        .calculator {
+            width: 320px;
+            padding: 10px;
+         }
+         .calculator .buttons span{
+            padding: 8px;
+         }
+    }
+
+/* For Mobile S  */
+    @media only screen and (max-width: 320px){
+        .calculator .buttons span{
+            font-size: .8rem;
+            font-weight: bold;
+            padding: 8px;
+        }
+    }
+    
+/* For even smaller devices */
+    @media only screen and (max-width: 280px){
+        .calculator {
+            width: 280px;
+            padding: 6px;
+         }
+         .calculator .buttons span{
+            padding: 5px;
+            font-size: .6rem;
+            font-weight: bold;
+         }
+    }
+    
